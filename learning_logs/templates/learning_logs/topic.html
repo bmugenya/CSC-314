@@ -1,0 +1,80 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+    <br /><br />
+    <div class="container">
+        <h2>{{ topic }}</h2>
+        <div class="col-md-8">
+            <p><a href="{% url 'learning_logs:new_entry' topic.id %}">Comment</a></p>
+            {% for entry in entries %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {{ entry.date_added|date:'M d, Y H:i' }}
+                        <a href="{% url 'learning_logs:edit_entry' entry.id %}">Edit</a>
+                    </div>
+
+                    <div class="panel-body">
+                        {{ entry.text|linebreaks }}
+                    </div>
+                </div> <!-- panel -->
+
+                {% empty %}
+                    There are no entries for this topic yet.
+            {% endfor %}
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {% load staticfiles %}
+                    <img src="{% static 'learning_logs/img/job.png' %}" width="100%"/>
+                </div>
+
+                <div class="panel-body">
+                    <div class="header">
+                        <h4 class="motto">SERVICES REQUIRED</h4>
+                    </div>
+
+                    <div class="content">
+                        <div class="main">
+                            <input type="radio">Empty wastebaskets<br />
+                            <input type="radio">Purchase groceries<br />
+                            <input type="radio">General Cleaning <br />
+                            <input type="radio" >Run errands<br />
+                            <input type="radio">Baby sitting<br />
+                            <input type="radio">Cooking & Serving<br />
+                            <input type="radio">Kitchen Cleaning <br />
+                            <input type="radio">Refrigerator Cleaning<br />
+                            <input type="radio">Cabinet Cleaning<br />
+                            <input type="radio">Oven Cleaning<br />
+                            <input type="radio">Window Washing<br />
+                            <input type="radio">Pet Clean-up<br />
+                            <input type="radio">Carpet Cleaning<br />
+
+                        </div>
+                        <div class="motto"></div><br />
+                            <h4 class="text-center">Contact</h4>
+                            <p>Phone:</p>
+                            <p>Email:</p>
+                            <p>County:</p>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div class="social-links text-center">
+                            {% load staticfiles %}
+                            <img src="{% static 'learning_logs/img/facebk.png' %}" width="10%"/>
+                            {% load staticfiles %}
+                            <img src="{% static 'learning_logs/img/in.png' %}" width="10%"/>
+                            {% load staticfiles %}
+                            <img src="{% static 'learning_logs/img/google.png' %}" width="10%"/>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<br /><br />
+{% endblock content %}

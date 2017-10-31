@@ -1,0 +1,141 @@
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--   CSS  -->
+<link rel="stylesheet" type="text/css" href="{% static 'learning_logs/css/style.css' %}" media="screen,projection"/>
+
+<link href="{% static 'learning_logs/css/rotating-card.css' %}" rel="stylesheet" />
+<link href="{% static 'learning_logs/css/bootstrap.css' %}" rel="stylesheet" />
+
+
+<!--   JS -->
+<script src="{% static 'learning_logs/js/init.js' %}" type="text/javascript"></script>
+
+<title>Wasafi</title>
+
+</head>
+
+<body>
+
+<div class="navbar-wrapper">
+      <div class="container">
+        <a class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbar" aria-expanded="false" aria-controls="navbar">Menu</a>
+        <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Wasafi</a>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'learning_logs:topics' %}">Posts</a></li>
+                <li><a href="{% url 'learning_logs:board' %}">Job Board</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li><a>Hello, {{ user.username }}.</a></li>
+                <li><a href="{% url 'users:logout' %}">Log Out</a></li>
+                {% else %}
+                <li><a href="{% url 'users:register' %}">Register</a></li>
+                <li><a href="{% url 'users:login' %}">Log In</a></li>
+                {% endif %}
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+
+    <div class="modal-content animate">
+        <div class="container-contact">
+        <h4>TERMS OF USE</h4>
+        <p>orem ipsum dolor sit ǣmeÞ, hiƿc timeām recÞequē ei duo, et his possim ǣūðiām laÞine. Ea mēl debet quǣndō.
+            Ex quo vidiÞ rēque fabulas. Īd modo dēcore appellantur sīÞ, ex sōnet nemore fāȝulās usū. Ne vivendum trāctātos has.
+            Ōðio periculǽ id meī.Ċeterō sensibus dissentiunt ex per, īd civibus epīċurī seā. Qui ea putent cōrpora īnstrūċtiōr,
+            cu nǣm alterum utroque. Nonumy reprēheƿdunt vel ān, consūl gubergren vel īð. Mēl eu consul habemus, cum id solēat
+            ǣdipisci ǽccommodǽre.</p>
+
+        <p>orem ipsum dolor sit ǣmeÞ, hiƿc timeām recÞequē ei duo, et his possim ǣūðiām laÞine. Ea mēl debet quǣndō.
+            Ex quo vidiÞ rēque fabulas. Īd modo dēcore appellantur sīÞ, ex sōnet nemore fāȝulās usū. Ne vivendum trāctātos has.
+            Ōðio periculǽ id meī.Ċeterō sensibus dissentiunt ex per, īd civibus epīċurī seā. Qui ea putent cōrpora īnstrūċtiōr,
+            cu nǣm alterum utroque. Nonumy reprēheƿdunt vel ān, consūl gubergren vel īð. Mēl eu consul habemus, cum id solēat
+            ǣdipisci ǽccommodǽre.</p>
+
+        <p>orem ipsum dolor sit ǣmeÞ, hiƿc timeām recÞequē ei duo, et his possim ǣūðiām laÞine. Ea mēl debet quǣndō.
+            Ex quo vidiÞ rēque fabulas. Īd modo dēcore appellantur sīÞ, ex sōnet nemore fāȝulās usū. Ne vivendum trāctātos has.
+            Ōðio periculǽ id meī.Ċeterō sensibus dissentiunt ex per, īd civibus epīċurī seā. Qui ea putent cōrpora īnstrūċtiōr,
+            cu nǣm alterum utroque. Nonumy reprēheƿdunt vel ān, consūl gubergren vel īð. Mēl eu consul habemus, cum id solēat
+            ǣdipisci ǽccommodǽre.</p>
+       </div>
+    </div>
+</div>
+
+
+{% block header %}{% endblock header %}
+
+
+      {% block content %}
+
+  {% endblock content %}
+
+
+<div class="container-block">
+
+
+<footer class="page-footer teal">
+    <div class="container">
+      
+        <div class="col-xs-12 col-md-4">
+          <h4 class="white-text">Who we are</h4>
+          <p class="grey-text text-lighten-4">Wasafi was started to remove the hassle of finding, booking and paying a cleaner. we are starting a movement to make cleaning services available to a broader audience. By creating an easy way to match homeowners with trusted, professional service providers at affordable rates.</p>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+            <ul></ul>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+            <h4>Every Helper is</h4>
+            <ul  class="footer-text">
+
+            <li>EXPERIENCED & PROFESSIONAL</li>
+            <li>REFERENCE CHECKED</li>
+            <li>NTERVIEWED IN-PERSON</li>
+            <li>HONEST AND DEPENDABLE</li>
+            <li> ALWAYS IMPROVING</li>
+            <li>INSURED & BONDED</li>
+          </ul>
+        </div>
+    </div>
+
+
+    <div class="footer-copyright">
+        <div class ="container">
+
+            <div class="col-xs-12 col-md-4">
+                <p>COPYRIGHT © Wasafi 2017</p>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <ul></ul>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <p onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Terms of use</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>

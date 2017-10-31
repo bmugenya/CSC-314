@@ -1,0 +1,706 @@
+{% extends "learning_logs/base.html" %}
+
+{% block header %}
+    <header>
+        <div class="col-md-2" style="background:#405266;">
+            <h2>SEARCH</h2>
+        </div>
+
+        <div class="col-md-10"   style="background:#d7dbdd;">
+
+            <select name="county" >
+                <option value="Baringo County"> Baringo County </option>
+                <option value="Bomet County"> Bomet County</option>
+                <option value="Bungoma County"> Bungoma County </option>
+                <option value="Busia County">Busia County </option>
+                <option value="Elgeyo Marakwet County"> Elgeyo Marakwet County</option>
+                <option value="Embu County"> Embu County </option>
+                <option value="Garissa County"> Garissa County </option>
+                <option value="Homa Bay County"> Homa Bay County</option>
+                <option value="Isiolo County"> Isiolo County </option>
+                <option value="Kajiado County"> Kajiado County</option>
+                <option value="Kakamega County"> Kakamega County </option>
+                <option value="Kericho County"> Kericho County </option>
+                <option value="Kiambu County"> Kiambu County</option>
+                <option value="Kilifi County"> Kilifi County </option>
+                <option value="Kisii County"> Kisii County</option>
+                <option value="Kisumu County"> Kisumu County </option>
+                <option value="Kitui County">Kitui County </option>
+                <option value="Kwale County"> Kwale County</option>
+                <option value="Laikipia County"> Laikipia County</option>
+                <option value="Lamu County"> Lamu County</option>
+                <option value="Machakos County"> Machakos County </option>
+                <option value="Makueni County"> Makueni County </option>
+                <option value="Mandera County"> Mandera County </option>
+                <option value=" Meru County"> Meru County</option>
+                <option value="Migori County"> Migori County</option>
+                <option value="Marsabit County"> Marsabit County</option>
+                <option value="Mombasa County"> Mombasa County</option>
+                <option value="Muranga County"> Muranga County</option>
+                <option value="Nairobi County"> Nairobi County</option>
+                <option value="Nakuru County"> Nakuru County </option>
+                <option value="Nandi County"> Nandi County </option>
+                <option value="Narok County"> Narok County </option>
+                <option value="Nyamira County"> Nyamira County </option>
+                <option value="Nyandarua County"> Nyandarua County </option>
+                <option value="Nyeri County"> Nyeri County </option>
+                <option value="Samburu County"> Samburu County</option>
+                <option value="Siaya County"> Siaya County</option>
+                <option value="Taita Taveta County">Taita Taveta County </option>
+                <option value="Tana River County"> Tana River County </option>
+                <option value="Tharaka Nithi County"> Tharaka Nithi County</option>
+                <option value="Trans Nzoia County"> Trans Nzoia County</option>
+                <option value="Turkana County"> Turkana County</option>
+                <option value="Uasin Gishu County"> Uasin Gishu County</option>
+                <option value="Vihiga County"> Vihiga County </option>
+                <option value="Wajir County"> Wajir County </option>
+                <option value="West Pokot County"> West Pokot County</option>
+                <option value="...">...</option>
+            </select>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <br />
+    <div class="wrapper">
+      <div class="col-md-2"> <!-- Note that "m4 l3" was added -->
+        <input type="radio" name="request">Housekeeper <br />
+        <input type="radio" name="request">HouseKeeping Jobs<br />
+
+        <hr />
+
+        <h4 class="filter">Type of Provider</h4>
+        <input type="radio"  value="provider">Agencies/Companies<br />
+        <input type="radio"  value="provider">Individuals<br />
+
+        <hr />
+
+        <h4 class="filter">SERVICES</h4>
+        <input type="radio">Empty wastebaskets<br />
+        <input type="radio">Purchase groceries<br />
+        <input type="radio">General Cleaning <br />
+        <input type="radio" >Run errands<br />
+        <input type="radio">Baby sitting<br />
+        <input type="radio">Cooking & Serving<br />
+        <input type="radio">Kitchen Cleaning <br />
+        <input type="radio">Refrigerator Cleaning<br />
+        <input type="radio">Cabinet Cleaning<br />
+        <input type="radio">Oven Cleaning<br />
+        <input type="radio">Window Washing<br />
+        <input type="radio">Pet Clean-up<br />
+        <input type="radio">Carpet Cleaning<br />
+
+        <hr />
+
+        <h4 class="filter">Duration</h4>
+        <input type="radio">Part-Time<br />
+        <input type="radio">Full-Time<br />
+
+        <hr />
+
+        <h4 class="filter">Other</h4>
+        <input type="radio">Mature Maids (18+)<br />
+        <input type="radio">Has Own Equipment<br />
+        <input type="radio">Eligible To Work<br />
+      </div>
+    </div>
+    <br />
+
+      <div class="col-md-10"> <!-- Note  added -->
+
+        <div class="row">
+           <div class="col-md-4 col-sm-6">
+             <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                          {% load staticfiles %}
+                          <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+                        </div>
+                        <div class="user">
+                            {% load staticfiles %}
+                            <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"Lorem ipsum dolor sit amet, vel in volutpat mollis in rutrum at,erat ut convallis senectus"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+                                <div class="motto"></div>
+                                    <br />
+                                    <h4 class="text-center">Contact</h4>
+                                    <p>Phone:</p>
+                                    <p>Email:</p>
+                                    <p>County:</p>
+                                </div>
+                           </div>
+                            <div class="footer">
+                                <div class="social-links text-center">
+                                    {% load staticfiles %}
+                            <img src="{% static 'learning_logs/img/facebk.png' %}" width="10%"/>
+                            {% load staticfiles %}
+                            <img src="{% static 'learning_logs/img/in.png' %}" width="10%"/>
+                            {% load staticfiles %}
+                            <img src="{% static 'learning_logs/img/google.png' %}" width="10%"/>
+                                <br />
+                        </div>
+
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+
+        <div class="col-md-4 col-sm-6">
+             <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                          <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                           <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                          <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+        <div class="col-md-4 col-sm-6">
+             <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                          <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                         <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+        <div class="col-md-4 col-sm-6">
+     <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                         <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                         <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                     Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+
+        <div class="col-md-4 col-sm-6">
+<div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                           <div class="cover">
+                          {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/rotating_card_thumb.png'%}"/>
+
+
+                        </div>
+                        <div class="user">
+                                  {% load staticfiles %}
+    <img class="img-circle" src="{% static 'learning_logs/img/maid.png'%}"/>
+
+
+
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Aunty Boss</h3>
+                                <p class="profession">Helper</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer-card">
+
+                            <button class="btn" onclick="rotateCard(this)">
+                                   Interested
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h4 class="motto">"To be or not to be, this is my awesome motto!"</h4>
+                        </div>
+                        <div class="content">
+                           <div class="main">
+                                <h4 class="text-center">Profile Description</h4>
+                                <p class="text-center">Kitchen Cleaning, Cooking, Serving, Dishes, Packing and many others...</p>
+
+
+                            <div class="motto"></div>
+                            <br />
+                            <h4 class="text-center">Contact</h4>
+
+                                        <p>Phone:</p>
+                                        <p>Email:</p>
+
+
+                                </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                 <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                 <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+           </div>
+
+
+    <div class="space-200"></div>
+
+</div>
+
+
+ <div class="container">
+    <div class="slide">
+
+   {% load staticfiles %}
+<img src="{% static 'learning_logs/img/service.svg' %}" width="20%"/>
+
+ {% load staticfiles %}
+<img src="{% static 'learning_logs/img/service.svg' %}" width="20%"/>
+
+ {% load staticfiles %}
+<img src="{% static 'learning_logs/img/service.svg' %}" width="20%"/>
+
+  {% load staticfiles %}
+<img src="{% static 'learning_logs/img/service.svg' %}" width="20%"/>
+
+ {% load staticfiles %}
+<img src="{% static 'learning_logs/img/service.svg' %}" width="20%"/>
+
+</div>
+    </div>
+      </div>
+ {% endblock content %}
+

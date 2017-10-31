@@ -1,0 +1,127 @@
+{% extends "learning_logs/base.html" %}
+
+
+{% block content %}
+    <br /><br />
+
+    <div class="container">
+        <div class="imagewrap">
+            {% load staticfiles %}
+            <img  src="{% static 'learning_logs/img/calc.jpg' %}" width="100%"/>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="button1" >Get Your Estimate</button>
+        </div>
+
+        <br /><br />
+
+        <div class="col-md-8">
+            <div class="inline">
+                <p><a href="{% url 'learning_logs:topics' %}">Back</a></p>
+                <p> > </p>
+                <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+            </div>
+
+            <p>Comment:</p><br />
+            <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button name='submit'>add entry</button>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="imagewrap">
+                    {% load staticfiles %}
+                    <img class="subscribe" style="opacity:0.3;" src="{% static 'learning_logs/img/coffee.jpg' %}" height="100px" width="100%"/>
+                    <h5>NEVER MISS A POST</h5>
+                </div>
+
+                <div class="panel-body">
+                    <p>Subscribe now and receive a box filled with hand-picked househelp as well as Job opening</p>
+                    <div class="clearfix">
+                        <input class="cancelbtn" type="email">
+                        <button type="button" class="signupbtn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+            <div class="modal-content animate">
+                <div class="container-contact">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="col-xs-6 col-sm-3">
+                                Region
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                Hour
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                Day
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                Month
+                            </div>
+                            <br />
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="col-xs-6 col-sm-3">
+                                <label>Cities</label><br />
+                                <label>Nairobi</label><br />
+                                <label>Mombasa</label><br />
+                                <label>Kisumu</label><br />
+                                <label> Municipalities</label><br />
+                                <label>Mavoko </label><br />
+                                <label>Riuru</label><br />
+                                <label>Limuru</label><br />
+                                <label>None cities</label><br />
+                            </div>
+
+                            <div class="col-xs-6 col-sm-3">
+                                <label>97.90</label><br />
+                                <label>97.90</label><br />
+                                <label>97.90</label><br />
+                                <label>97.90</label><br />
+                                <label>89.50</label><br />
+                                <label>89.50</label><br />
+                                <label>89.50</label><br />
+                                <label>89.50</label><br />
+                                <label>54.70</label><br />
+                            </div>
+
+
+                            <div class="col-xs-6 col-sm-3">
+                                <label>527.10 </label><br />
+                                <label>527.10 </label><br />
+                                <label>527.10 </label><br />
+                                <label>527.10 </label><br />
+                                <label>484.30</label><br />
+                                <label>484.30</label><br />
+                                <label>484.30</label><br />
+                                <label>484.30</label><br />
+                                <label>296.20</label>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-3">
+                                <label> 10,954.70 </label><br />
+                                <label>10,954.70 </label><br />
+                                <label>10,954.70 </label><br />
+                                <label>10,954.70 </label><br />
+                                <label> 10,107.10 </label><br />
+                                <label>10,107.10 </label><br />
+                                <label>10,107.10</label><br />
+                                <label>10,107.10</label><br />
+                                <label>5,844.20</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

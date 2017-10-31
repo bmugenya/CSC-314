@@ -1,0 +1,112 @@
+{% extends "learning_logs/base.html" %}
+
+
+
+
+
+{% block header %}
+
+    <div class="header-tag">
+
+
+        {% load staticfiles %}
+        <img src="{% static 'learning_logs/img/clean.jpg' %}" width="100%" height="400px"/>
+    </div>
+
+    <div class="center-text">
+        <div class="section-index">
+            <h1 class="header center teal-text text-lighten-2">Hire Housekeepers in Your Neighborhood</h1>
+            <div class="row center">
+                <h4 class="header col s12 light">Someone out there loves washing dishes as much as you hate watching them pile up. Hire a one-time or recurring cleaning service today.</h4>
+            </div>
+
+            <div class="row center">
+                <a href="{% url 'learning_logs:topics' %}">Find a housekeeper</a>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+
+{% endblock header %}
+
+
+
+{% block content %}
+
+  <div class="container-wrapper">
+
+      <!--   Icon Section   -->
+    <div class="row">
+        <h1 class="header center teal-text text-lighten-2">How it works</h1>
+        <div class="col-md-4">
+            <div class="icon-block">
+                <div class="center brown-text">
+                    {% load staticfiles %}
+                    <img src="{% static 'learning_logs/img/location.svg' %}"/>
+                    <h4 class="center">step 1</h4>
+                    <p class="light">Post a Job opening on our Job Post and Using Our Directory will Filter your results based on experience or services offered</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="icon-block">
+                <div class="center brown-text">
+                    {% load staticfiles %}
+                    <img src="{% static 'learning_logs/img/helper.svg' %}"/>
+                    <h4 class="center">Step 2</h4>
+                    <p class="light">Narrow down your results and hire the one that stands out.Easy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="icon-block">
+                <h2 class="center brown-text">
+                {% load staticfiles %}
+                <img src="{% static 'learning_logs/img/care.svg' %}"/></h2>
+                <h4 class="center">Step 3</h4>
+                <p class="light">Connect With Your Matches Reach out to potential hires through phone call.</p>
+            </div>
+        </div>
+    </div>
+    <br /> <br />
+
+
+    <div class="row center">
+        <a href="{% url 'learning_logs:topics' %}"> <button>Find a housekeeper</button></a>
+    </div>
+  </div>
+  <br /> <br />
+
+
+
+
+
+  <div class="slide">
+    {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/background.svg' %}" width="20%"/>
+      
+    {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/background.svg' %}" width="20%"/>
+      
+    {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/background.svg' %}" width="20%"/>
+      
+    {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/background.svg' %}" width="20%"/>
+      
+    {% load staticfiles %}
+    <img src="{% static 'learning_logs/img/background.svg' %}" width="20%"/>
+  </div>
+
+
+
+{% endblock content %}
+
+
+    <!-- Carousel
+    ================================================== -->
+
+   <!-- /.carousel -->

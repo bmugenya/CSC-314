@@ -1,0 +1,43 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+
+            <!--      Wizard container        -->
+                <div class="wizard-container">
+                    <div class="card wizard-card">
+                        <div class="wizard-header">
+                            <span><b>Register</b></span> <br />
+                            <small>Recieve up to 10 free post.</small>
+                        </div>
+
+                        <div class="wizard-navigation">
+		                    <h3 class="header-mark">Create an account</h3>
+                            <br />
+
+                            <div class="login">
+                                <form method="post" action="{% url 'users:register' %}" class="form">
+
+
+                                    {% csrf_token %}
+
+                                    {{ form.as_p }}
+
+                                    <button name="submit">Register</button>
+                                    <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br /><br />
+
+{% endblock content %}
+

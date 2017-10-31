@@ -1,0 +1,39 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+                <div class="card wizard-card">
+                    <div class="wizard-header">
+                        <span><b>LOG INN</b></span><br />
+                        <small>This information will let househelper's know more about you.</small>
+                    </div>
+
+	                <h3 class="header-mark">Welcome Back</h3><br />
+
+                    <div class="login">
+                        <form method="post" action="{% url 'users:login' %}" class="form">
+                            {% csrf_token %}
+                            {% bootstrap_form form %}
+                            {% buttons %}
+                            <button name="submit" class="btn btn-primary">log in</button>
+                            {% endbuttons %}
+                            {% if user.is_authenticated %}
+                                <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+                            {% else %}
+                                <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br /><br />
+
+{% endblock content %}

@@ -1,0 +1,584 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.fix{
+margin:0;
+padding:0;
+}
+ul{
+list-style:none;
+}
+ body {
+ background-color: rgba(0, 0, 0, 0.1);
+ }
+
+ input{
+     background:white;
+ }
+ .navbar-wrapper{
+
+   color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(51, 51, 51, 0.08);
+
+ }
+
+ div.col-xs-6 col-sm-4:nth-of-type(odd) {
+    background: #e0e0e0;
+}
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+.wizard-container {
+  padding-top: 100px;
+  z-index: 3;
+}
+.subscribe{
+    background-color: #fefefe;
+   color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav-search{
+width:15%;
+height:100%;
+background:#d7dbdd;
+float:left;
+}
+
+.pick{
+width:85%;
+height:100%;
+background:#405266;
+float:right;
+}
+header{
+width:100%;
+height:80px;
+}
+
+h5{
+margin:0  auto;
+
+      position:absolute;
+    font-weight: 1000;
+    right:50%;
+
+    top:50%;
+}
+.light, .page-footer .footer-copyright {
+  font-weight: 300;
+}
+.wizard-navigation {
+  position: relative;
+}
+
+.card {
+  background-color: #FFFFFF;
+  padding: 10px 0 20px;
+  width: 100%;
+}
+.wizard-card {
+  min-height: 410px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+.wizard-card .picture-container {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.wizard-card .picture {
+  width: 106px;
+  height: 106px;
+  background-color: #999999;
+  border: 4px solid #CCCCCC;
+  color: #FFFFFF;
+  border-radius: 50%;
+  margin: 5px auto;
+  overflow: hidden;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+
+.teal {
+  background-color: #009688 !important;
+}
+
+.teal-text {
+  color: #009688 !important;
+}
+
+.page-footer {
+  padding-top: 20px;
+  color: #fff;
+  background-color: #ee6e73;
+}
+
+.page-footer .footer-copyright {
+  overflow: hidden;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(51, 51, 51, 0.08);
+}
+.wizard-header {
+    text-align:center;
+}
+.header-mark{
+    text-align:center;
+}
+
+.wizard-card .picture:hover {
+  border-color: #2ca8ff;
+}
+.wizard-card .picture input[type="file"] {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0 !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.wizard-card .picture-src {
+  width: 100%;
+}
+.wizard-card .tab-content {
+  min-height: 340px;
+  padding: 20px 10px;
+}
+.wizard-card .wizard-footer {
+  padding: 0 10px;
+}
+.wizard-card .disabled {
+  display: none;
+}
+.wizard-card .wizard-header h3 {
+  font-weight: 200;
+  text-align: center;
+
+}
+
+.header-mark{
+    width:100%;
+     background-color: #26a69a !important;
+}
+.wizard-card[data-color="green"] .choice:hover .icon, .wizard-card[data-color="green"] .choice.active .icon {
+  border-color: #05AE0E;
+}
+.wizard-card[data-color="green"] .picture:hover {
+  border-color: #05AE0E;
+}
+.wizard-card[data-color="green"] .moving-tab {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #05AE0E;
+  top: 0px;
+  left: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+.wizard-card[data-color="azzure"] .choice:hover .icon, .wizard-card[data-color="azzure"] .choice.active .icon {
+  border-color: #2CA8FF;
+}
+.wizard-card[data-color="azzure"] .picture:hover {
+  border-color: #2CA8FF;
+}
+.wizard-card[data-color="azzure"] .moving-tab {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #2CA8FF;
+  top: 0px;
+  left: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+.wizard-card[data-color="blue"] .choice:hover .icon, .wizard-card[data-color="blue"] .choice.active .icon {
+  border-color: #3472F7;
+}
+.wizard-card[data-color="blue"] .picture:hover {
+  border-color: #3472F7;
+}
+.wizard-card[data-color="blue"] .moving-tab {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #3472F7;
+  top: 0px;
+  left: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+.wizard-card[data-color="orange"] .choice:hover .icon, .wizard-card[data-color="orange"] .choice.active .icon {
+  border-color: #FF9500;
+}
+.wizard-card[data-color="orange"] .picture:hover {
+  border-color: #FF9500;
+}
+.wizard-card[data-color="orange"] .moving-tab {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #FF9500;
+  top: 0px;
+  left: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+.wizard-card[data-color="red"] .choice:hover .icon, .wizard-card[data-color="red"] .choice.active .icon {
+  border-color: #FF3B30;
+}
+.wizard-card[data-color="red"] .picture:hover {
+  border-color: #FF3B30;
+}
+.wizard-card[data-color="red"] .moving-tab {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #FF3B30;
+  top: 0px;
+  left: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+.wizard-card .btn {
+  text-transform: uppercase;
+}
+.wizard-card .info-text {
+  text-align: center;
+  font-weight: 300;
+  margin: 10px 0 30px;
+}
+.wizard-card .choice {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.wizard-card .choice .icon {
+  text-align: center;
+  vertical-align: middle;
+  height: 116px;
+  width: 116px;
+  border-radius: 50%;
+  background-color: #999999;
+  color: #FFFFFF;
+  margin: 0 auto 20px;
+  border: 4px solid #CCCCCC;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+.wizard-card .choice i {
+  font-size: 30px;
+  line-height: 111px;
+}
+.wizard-card .choice:hover .icon, .wizard-card .choice.active .icon {
+  border-color: #2ca8ff;
+}
+.wizard-card .choice input[type="radio"],
+.wizard-card .choice input[type="checkbox"] {
+  position: absolute;
+  left: -10000px;
+  z-index: -1;
+}
+.wizard-card .btn-finish {
+  display: none;
+}
+.wizard-card .description {
+  color: #999999;
+  font-size: 14px;
+}
+
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.section img{
+position:relative;
+}
+.section container{
+position:absolute;
+top:0;
+}
+
+
+  .container-wrapper{
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+  }
+
+  .imagewrap {
+      width:100%;
+      display:inline-block;
+      position:relative;}
+.button1 {
+    position:absolute;
+    right:50%;
+    top:50%;
+
+
+
+    height:50px;
+}
+
+.inline p{
+    display:inline;
+}
+small {
+  font-size: 80%;
+}
+
+.login{
+  width: 60%;
+margin:0 auto;
+
+}
+.center-text{
+    width:50%;
+    margin:0 auto;
+    text-align:center;
+}
+.topic{
+    width:100%;
+
+}
+.panel-body ul{
+    list-style:none;
+}
+
+@media only screen and (max-width : 549px) {
+
+h1{
+font-size: 2.1rem;
+}
+
+}
+
+@media only screen(max-width : 654px) {
+
+h1{
+font-size: 2.6rem;
+}
+
+}
+
+.call{
+
+	border-radius:5px;
+    bv
+}
+
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.slide{
+  width:100%;
+  background-size:100% 10%;
+  display:flex;
+
+}
+
+.footer-text li{
+  font-size: 12px;
+  height:12px;
+  margin-bottom:1.5em;
+ }
+
+h4{
+  text-align:center;
+}
+
+
+
+/*Login Background image*/
+
+
+hr{
+color: #f00;
+background-color: #f00;
+height: 5px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing:border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  color: #ffffff;
+     background-color: #26a69a !important;
+
+    padding: 14px 20px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+}
+
+/* Extra styles for the cancel button */
+
+.input{
+     background-color: white;
+}
+.cancelbtn {
+
+    padding: 14px 20px;
+    background-color: white;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+/* Add padding to container elements */
+.container-contact {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    text-align:center;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+.img-with-text{
+  text-align:justify;
+  width:80px;
+}
+
+.img-with-text img{
+  display:block;
+  margin:0 auto;
+
+}
+
+.color{
+  color:#1693A5;
+  font-size:24px;
+}
+
+
+/**********************   Media Quries  **********************************
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+
+  }
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+
+    h1{
+      display:none;
+    }
+
+ 
+}
+
+

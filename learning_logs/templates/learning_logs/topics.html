@@ -1,0 +1,87 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+    <br /><br />
+
+    <div class="container">
+        <div class="col-md-8">
+            <div class="job-post">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="col-xs-6 col-sm-4">
+                            <small>POST</small><br />
+                        </div>
+
+                        <div class="col-xs-6 col-sm-4">
+                            <small>USER</small><br />
+                        </div>
+
+                        <div class="col-xs-6 col-sm-4">
+                            <small>DATE</small><br />
+                        </div>
+                        <br />
+                    </div>
+                    <br />
+
+
+                    <div class="panel-body">
+                        <div class="col-xs-6 col-sm-4">
+                        {% for topic in topics %}
+                            <span><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></span>
+                            <br /><br />
+                            {% empty %}
+                            <span>No post have been added yet.</span>
+                        {% endfor %}
+                    </div>
+
+
+                    <div class="col-xs-6 col-sm-4">
+                        {% for topic in topics %}
+                            <span><a>by {{ user.username }}.</a></span>
+                            <br /><br />
+                        {% endfor %}
+                    </div>
+
+                    <div class="col-xs-6 col-sm-4">
+                        {% for topic in topics %}
+                            <span><a>{{ topic.date_added|date:'M d, Y H:i' }}</a></span>
+                            <br /><br />
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <small><a href="{% url 'learning_logs:new_topic' %}"><h3>POST A JOB</h3></a></small>
+                </div>
+
+                <div class="panel-body">
+                    <p><b>0 KSH/=</b> for <b>1O POST</b></p>
+                    <p><b>150 KSH/=</b> for <b>30 DAYS</b></p>
+                    <p><b>200 KSH/=</b> for <b>2 MONTH</b></p>
+                </div>
+            </div>
+
+            <h4>Why list with us</h4>
+            <p>Lorem ipsum dolor sit amet, vel in volutpat mollis in rutrum at,
+                erat ut convallis senectus, dui a id ut arcu eros, massa suspendisse gravida,
+                nullam sapien ipsum a curabitur. Vel volutpat viverra tincidunt diam risus blandit,</p>
+
+            <p>non orci quam mattis id quisque, vel ultricies, donec sed, a turpis condimentum ipsum elit magna.
+                Sapien eget commodo, tellus nunc tempor ut pretium tincidunt etiam,
+                cras risus vehicula potenti lectus inceptos, auctor lorem ligula ac elit aliquam placerat,
+                ut nullam tempus no</p>
+
+
+
+        </div>
+
+    </div>
+{% endblock content %}
